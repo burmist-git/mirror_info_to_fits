@@ -1,0 +1,80 @@
+# Format of lines: type nseg { rmin rmax dphi phi0 | x y diam rot }
+#    type: RINGsegments | SQUAREsegments | (Y)HEXsegments | CIRCULARsegments
+#          (the capital part being the minimum abbreviation required).
+#          Instead of the two fundamental orientations of hexagons used
+#          for pixels and mirror tiles in single-reflector configurations,
+#          the orientation of hexagons is defined by the rotation angle
+#          (0 degrees corresponding to shape type 1, with two flat sides
+#          parallel to the x axis, 90 deg. corresponding to shape type 3).
+#    nseg: Number of segments in this group; must be =1 except for ring segments
+#    Ring segments:
+#       rmin, rmax: minimum and maximum radius of ring in x/y projection [cm].
+#       dphi: angle around axis subtended by each segment [deg.];
+#             for a complete ring it would be 360/nseg.
+#       phi0: angle around axis where first segment starts [deg.].
+#    Other segment types (configured individually):
+#       x, y: position of segment center in x/y projection [cm].
+#       diam: diameter of segment in projection along surface normal at center [cm].
+#       rot:  rotation angle of segment around its own axis (sq.+hex) [deg.]
+
+# Origin of coordinates: "Optical parameters for ASTRI Chile demonstrators MC model" 2017-10-19,
+# after accounting for different coordinate systems.
+
+# Shape N     Xc        Yc        Diam.    Rot
+#            [cm]      [cm]       [cm]     [deg]
+
+# Segment ID 1
+hex 1        -85.6      0.0       84.6      0
+
+# Segment ID 2
+hex 1        -42.8    -74.2       84.6      0
+
+# Segment ID 3
+hex 1         42.8    -74.2       84.6      0
+
+# Segment ID 4
+hex 1         85.6      0.0       84.6      0
+
+# Segment ID 5
+hex 1         42.8     74.2       84.6      0
+
+# Segment ID 6
+hex 1        -42.8     74.2       84.6      0
+
+
+# Segment ID 7
+hex 1       -128.0    -73.9       84.6      0
+
+# Segment ID 8
+hex 1          0.0   -147.8       84.6      0
+
+# Segment ID 9
+hex 1        128.0    -73.9       84.6      0
+
+# Segment ID 10
+hex 1        128.0     73.9       84.6      0
+
+# Segment ID 11
+hex 1          0.0    147.8       84.6      0
+
+# Segment ID 12
+hex 1       -128.0     73.9       84.6      0
+
+
+# Segment ID 13
+hex 1       -170.4      0.0       84.6      0
+
+# Segment ID 14
+hex 1        -85.2   -147.6       84.6      0
+
+# Segment ID 15
+hex 1         85.2   -147.6       84.6      0
+
+# Segment ID 16
+hex 1        170.4      0.0       84.6      0
+
+# Segment ID 17
+hex 1         85.2    147.6       84.6      0
+
+# Segment ID 18
+hex 1        -85.2    147.6       84.6      0

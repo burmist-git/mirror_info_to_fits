@@ -1,0 +1,16 @@
+{
+    "file": false,
+    "instrument": "MSTx-FlashCam",
+    "model_parameter_schema_version": "0.1.0",
+    "parameter": "dish_shape_length",
+    "parameter_version": "1.0.0",
+    "schema_version": "0.4.0",
+    "site": [
+        "North",
+        "South"
+    ],
+    "type": "float64",
+    "unique_id": null,
+    "unit": "cm",
+    "value": 1920.0
+}
