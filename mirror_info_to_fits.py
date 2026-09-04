@@ -498,6 +498,10 @@ def mirror_table_to_fits(
     table_handler.write_tables([table], output_file, overwrite_existing=True, file_type="FITS")
     logger.info(f"Wrote {len(table)} mirror positions from {mirror_list_file} to {output_file}")
 
+    ecsv_file = output_file.with_suffix(".ecsv")
+    table.write(ecsv_file, format="ascii.ecsv", overwrite=True)
+    logger.info(f"Wrote {len(table)} mirror positions from {mirror_list_file} to {ecsv_file}")
+
     r_pos = np.sqrt(x_pos**2 + y_pos**2)
     fig = plot_mirror_profile(r_pos, z_pos, telescope_model_name=tel_type)
     pdf_file = output_file.with_suffix(".pdf")
